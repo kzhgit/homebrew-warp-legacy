@@ -19,8 +19,7 @@ You can also visit the [Warp website](https://www.warp.dev/) for more informatio
 ### Before Installation
 
 **Important:** Remove existing Warp first to avoid conflicts:
-1. Drag Warp.app from Applications folder to Trash
-2. Empty Trash to complete removal
+- Drag Warp.app from Applications folder to Trash
 
 ### Install Legacy Version
 
