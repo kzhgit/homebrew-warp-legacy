@@ -16,34 +16,23 @@ You can also visit the [Warp website](https://www.warp.dev/) for more informatio
 
 ## Installation
 
-### 1. Add the Tap
+### Before Installation
+
+**Important:** Remove existing Warp first to avoid conflicts:
+1. Drag Warp.app from Applications folder to Trash
+2. Empty Trash to complete removal
+
+### Install Legacy Version
 
 ```bash
 brew tap kzhgit/warp-legacy
+brew install --cask warp@2025-07-09
 ```
 
-### 2. Install Legacy Version
+### Available Versions
 
-**Example version (reported to work with IME input):**
-```bash
-brew install --cask kzhgit/warp-legacy/warp@2025-07-09
-```
-
-**Check available versions:**
 ```bash
 brew search kzhgit/warp-legacy/
-```
-
-### 3. Switch from Official Warp
-
-If you have the official Warp installed:
-
-```bash
-# Remove official version (optional)
-brew uninstall --cask warp
-
-# Install stable legacy version
-brew install --cask kzhgit/warp-legacy/warp@2025-07-09
 ```
 
 ## Available Versions
@@ -54,48 +43,22 @@ For official changelogs and detailed release information, please refer to the [W
 
 ## Troubleshooting
 
-### Installation Issues
+### Installation Problems
 
-#### "Warning: Not upgrading, the latest version is already installed"
-
-**Quick Fix:**
+**Already installed error:**
 ```bash
-brew reinstall --cask kzhgit/warp-legacy/warp@2025-07-09
+brew reinstall --cask warp@2025-07-09
 ```
 
-**Complete Reset:**
+**If installation still fails:**
 ```bash
-# 1. Remove completely
-brew uninstall --cask --force kzhgit/warp-legacy/warp@2025-07-09
-
-# 2. Clear cache
 brew cleanup --prune=all
-
-# 3. Reinstall
-brew install --cask kzhgit/warp-legacy/warp@2025-07-09
+brew install --cask warp@2025-07-09 --force
 ```
 
-#### Download Cache Problems
-
+**Check installation:**
 ```bash
-# Clear download cache
-rm -rf ~/Library/Caches/Homebrew/downloads/*warp*
-
-# Force reinstall
-brew install --cask kzhgit/warp-legacy/warp@2025-07-09 --force
-```
-
-### Verification Commands
-
-```bash
-# Check installed versions
 brew list --cask | grep warp
-
-# Verify application
-ls -la /Applications/ | grep -i warp
-
-# Check tap status
-brew tap-info kzhgit/warp-legacy
 ```
 
 ## Important Considerations
@@ -115,25 +78,10 @@ brew tap-info kzhgit/warp-legacy
 
 ## Staying Updated
 
-### Tap Updates
+### Back to Official Version
 
 ```bash
-# Update tap information
-brew update
-
-# Check for new legacy versions
-brew search kzhgit/warp-legacy/
-```
-
-### Migration Back to Official
-
-When official Warp fixes your issues:
-
-```bash
-# Remove legacy version
-brew uninstall --cask kzhgit/warp-legacy/warp@2025-07-09
-
-# Install latest official version
+brew uninstall --cask warp@2025-07-09
 brew install --cask warp
 ```
 
